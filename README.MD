@@ -57,7 +57,7 @@ Run the container with the volume option set:
 
 If your envionment variables are already setup you can run the following to pass those variables directly in to the container:
 
-   docker run -it -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e AWS_SESSION_TOKEN -e AWS_DEFAULT_REGION mcrmonkey/awstools
+    docker run -it -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e AWS_SESSION_TOKEN -e AWS_DEFAULT_REGION mcrmonkey/awstools
 
 
 ## Building
