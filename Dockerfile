@@ -16,4 +16,7 @@ RUN apk --no-cache add util-linux bash python3 curl make less groff git vim &&\
   adduser cloud -Du 1000 -h /home/cloud && mkdir /home/cloud/project && chown -Rf cloud: /home/cloud 
 
 USER cloud
+
+WORKDIR /home/cloud
+
 ENTRYPOINT ["/bin/bash"]
