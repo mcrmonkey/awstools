@@ -1,7 +1,7 @@
 FROM alpine
 MAINTAINER ant <git@manchestermonkey.co.uk>
 
-ENV TFMVER 0.9.3
+ENV TFMVER 0.9.4
 ENV HOME=/home/cloud
 
 ADD https://releases.hashicorp.com/terraform/${TFMVER}/terraform_${TFMVER}_linux_amd64.zip /tmp/
