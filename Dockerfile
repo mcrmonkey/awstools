@@ -1,7 +1,7 @@
 FROM alpine
 LABEL maintainer "ant <git@manchestermonkey.co.uk>"
 
-ENV TFMVER 0.11.1
+ENV TFMVER 0.11.2
 ENV HOME=/home/cloud
 
 ADD https://releases.hashicorp.com/terraform/${TFMVER}/terraform_${TFMVER}_linux_amd64.zip /tmp/
@@ -13,7 +13,7 @@ RUN apk --no-cache add util-linux bash python3 curl make less groff git vim &&\
     tar -zxf /tmp/master.tar.gz -C /home/cloud/ && mv /home/cloud/bash-my-aws-master /home/cloud/.bash-my-aws &&\
     echo -ne "for I in /home/cloud/.bash-my-aws/lib/*-functions; do source \$I; done\n source /home/cloud/.bash-my-aws/bash_completion.sh\n\n PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$ '\n\n clear \n echo '\nTerraform version: ${TFMVER}\n AWS-CLI Version: $(aws --version)\n\n' " > /home/cloud/.bashrc &&\
   rm -f /tmp/* &&\
-  adduser cloud -Du 1000 -h /home/cloud && mkdir /home/cloud/project && chown -Rf cloud: /home/cloud 
+  adduser cloud -Du 1000 -h /home/cloud && mkdir /home/cloud/project && chown -Rf cloud: /home/cloud
 
 USER cloud
 
