@@ -1,7 +1,7 @@
 FROM alpine
 LABEL maintainer "ant <git@manchestermonkey.co.uk>"
 
-ENV TFMVER 0.11.3
+ENV TFMVER 0.11.7
 ENV HOME=/home/cloud
 
 ADD https://releases.hashicorp.com/terraform/${TFMVER}/terraform_${TFMVER}_linux_amd64.zip /tmp/
